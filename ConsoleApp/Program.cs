@@ -10,9 +10,9 @@ namespace ConsoleApp
     {
         private static async Task Main(string[] args)
         {
-            IEnumerable<Employee> devs = GetDevelopersEmployees();
+            var devs = GetDevelopersEmployees();
 
-            IEnumerable<Employee> sales = GetSalesEmployees();
+            var sales = GetSalesEmployees();
 
             Console.Read();
 
@@ -26,7 +26,7 @@ namespace ConsoleApp
             foreach (Employee employee in devs.Where(
                 e => e.Name.StartsWith("A")))
             {
-                Console.WriteLine(e.Name);
+                Console.WriteLine(employee.Name);
             }
         }
 
